@@ -22,7 +22,7 @@ with Diagram(name="Data Diagrams", show=True):
     users = Users('Users/Data Consumers')
     with Cluster("Airflow control plane"):
         airflow = Airflow('Airflow')
-        with Cluster("AWS Cloud"):
+        with Cluster("Local On Premises"):
             with Cluster("Event Workers"):
                 workers = [ECS("worker1"),
                         ECS("worker2"),
@@ -36,7 +36,7 @@ with Diagram(name="Data Diagrams", show=True):
                             Lambda("proc3")]
 
 
-        with Cluster("Local On Premises"):
+        with Cluster("AWS Cloud"):
             with Cluster("Event Workers 2"):
                 workers2 = [ECS("worker1"),
                         ECS("worker2"),

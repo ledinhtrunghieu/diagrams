@@ -19,6 +19,9 @@ from diagrams.aws.compute import EC2
 from diagrams.aws.database import Redshift
 from diagrams.onprem.analytics import Metabase
 from diagrams.aws.network import ElbApplicationLoadBalancer
+from diagrams.onprem.queue import Kafka
+from diagrams.aws.analytics import Kinesis
+
 
 
 
@@ -61,6 +64,8 @@ with Diagram(name="Data Diagrams", show=True, direction="LR"):
         metabase =  Metabase("Metabase")
         cloud_alb = ElbApplicationLoadBalancer("Application Load Balancer")
 
+
+    
     localdev >> docker >> airflow
     airflow >> cloud_s3
     airflow >> local_rawdata

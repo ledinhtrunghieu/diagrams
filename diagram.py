@@ -17,14 +17,10 @@ from diagrams.aws.storage import S3
 from diagrams.aws.analytics import EMR
 from diagrams.aws.compute import EC2
 from diagrams.aws.database import Redshift
-from diagrams.onprem.analytics import Metabase
+from diagrams.onprem.analytics import Superset
 from diagrams.aws.network import ElbApplicationLoadBalancer
 from diagrams.onprem.queue import Kafka
 from diagrams.aws.analytics import Kinesis
-
-
-
-
 
 with Diagram(name="Data Diagrams", show=True, direction="LR"):
     localdev = Client('Local Dev')
@@ -61,7 +57,7 @@ with Diagram(name="Data Diagrams", show=True, direction="LR"):
                 cloud_bucket = S3("S3 Buckets")
                 cloud_s3 >> cloud_emr >> cloud_bucket >> cloud_redshift
 
-        metabase =  Metabase("Metabase")
+        superset =  Superset("Dashboard")
         cloud_alb = ElbApplicationLoadBalancer("Application Load Balancer")
 
 
@@ -69,8 +65,8 @@ with Diagram(name="Data Diagrams", show=True, direction="LR"):
     localdev >> docker >> airflow
     airflow >> cloud_s3
     airflow >> local_rawdata
-    cloud_bucket >> metabase
-    cloud_redshift >> metabase
-    dw_local_storage >> metabase
-    dw_local_postgresql >> metabase
-    metabase >> cloud_alb >> users
+    cloud_bucket >> superset
+    cloud_redshift >> superset
+    dw_local_storage >> superset
+    dw_local_postgresql >> superset
+    superset >> cloud_alb >> users

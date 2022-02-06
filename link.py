@@ -23,3 +23,4 @@ https://www.reddit.com/r/dataengineering/comments/s78jvx/best_job_scheduler_in_2
 
 
 
+https://eugeneyan.com/writing/data-discovery-platforms/

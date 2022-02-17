@@ -12,8 +12,6 @@ https://blog.getdbt.com/future-of-the-modern-data-stack/
 
 https://engineering.linkedin.com/blog/2020/datahub-popular-metadata-architectures-explained
 
-dask
-
 https://www.metabase.com/pricing/ a lot of custom features need to be pay , so NO metabase
 
 
@@ -24,3 +22,5 @@ https://www.reddit.com/r/dataengineering/comments/s78jvx/best_job_scheduler_in_2
 
 
 https://eugeneyan.com/writing/data-discovery-platforms/
+
+https://www.youtube.com/watch?v=cmcFMz0xsz0

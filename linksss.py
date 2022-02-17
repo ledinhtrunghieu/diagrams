@@ -24,3 +24,9 @@ https://www.reddit.com/r/dataengineering/comments/s78jvx/best_job_scheduler_in_2
 https://eugeneyan.com/writing/data-discovery-platforms/
 
 https://www.youtube.com/watch?v=cmcFMz0xsz0
+https://www.reddit.com/r/dataengineering/comments/qx4x7z/building_a_data_warehouse_from_scratch_for_a/
+https://www.startdataengineering.com/post/data-engineering-project-for-beginners-batch-edition/
+https://www.youtube.com/watch?v=9iN6iw7Lamo
+
+datahub
+

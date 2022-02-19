@@ -21,6 +21,8 @@ from diagrams.onprem.analytics import Superset
 from diagrams.aws.network import ElbApplicationLoadBalancer
 from diagrams.onprem.queue import Kafka
 from diagrams.aws.analytics import Kinesis
+from diagrams.onprem.analytics import Dbt
+from diagrams.custom import Custom
 
 with Diagram(name="Data Diagrams", show=True, direction="LR"):
     localdev = Client('Local Dev')
@@ -34,39 +36,43 @@ with Diagram(name="Data Diagrams", show=True, direction="LR"):
             local_rawdata = Datacenter("Raw Data")
 
             with Cluster("Data Warehouse"):
-                dw_local_clean = Python("Pandas")
+                dw_local_dbt = Dbt("Transform")
                 with Cluster("Column-Oriented Wrappers"):
                     dw_local_postgresql = Postgresql('Postgre SQL')
-                local_rawdata >> dw_local_clean >> dw_local_postgresql
 
             with Cluster("Data Lake"):
                 dw_local_spark = Spark("Spark")
                 dw_local_storage = Storage("Storage")
-                local_rawdata >> dw_local_spark >> dw_local_storage >> dw_local_postgresql
-
+                local_rawdata >> dw_local_spark >> dw_local_storage >> dw_local_dbt >> dw_local_postgresql
+            
+            superset1 =  Superset("Local Dashboard")
+        
         with Cluster("AWS Cloud"):
-            cloud_s3 = S3("Amazon S3")
+            cloud_ec2 = EC2("AWS EC2")
 
             with Cluster("Data Warehouse"):
-                cloud_ec2 = EC2("AWS EC2") 
+                cloud_dbt = Dbt("Transform") 
                 cloud_redshift = Redshift('AWS Redshift')
-                cloud_s3 >> cloud_ec2 >> cloud_redshift
+
+            cloud_s3 = S3("S3 Buckets")
 
             with Cluster("Data Lake"):
                 cloud_emr= EMR('AWS EMR')
-                cloud_bucket = S3("S3 Buckets")
-                cloud_s3 >> cloud_emr >> cloud_bucket >> cloud_redshift
+                cloud_dl = Custom("File Format","./custom_icons/dl.png")
+                cloud_bucket = S3("Data Lake")
+                cloud_ec2 >> cloud_s3 >> cloud_emr >> cloud_dl >> cloud_bucket >> cloud_dbt >> cloud_redshift
 
-        superset =  Superset("Dashboard")
-        cloud_alb = ElbApplicationLoadBalancer("Application Load Balancer")
-
+            cloud_alb = ElbApplicationLoadBalancer("Application Load Balancer")
+            
+            superset2 =  Superset("Cloud Dashboard")
+        
+       
 
     
     localdev >> docker >> airflow
-    airflow >> cloud_s3
+    airflow >> cloud_ec2 
     airflow >> local_rawdata
-    cloud_bucket >> superset
-    cloud_redshift >> superset
-    dw_local_storage >> superset
-    dw_local_postgresql >> superset
-    superset >> cloud_alb >> users
+    cloud_redshift >> cloud_alb
+    dw_local_postgresql >> superset1 >> users
+    cloud_alb >> superset2 >> users
+    

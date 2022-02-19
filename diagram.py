@@ -85,3 +85,4 @@ with Diagram(name="Data Diagrams", show=True, direction="LR"):
 Jupyter 
 Athena
 DataHub
+Synthea

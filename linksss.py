@@ -29,4 +29,4 @@ https://www.startdataengineering.com/post/data-engineering-project-for-beginners
 https://www.youtube.com/watch?v=9iN6iw7Lamo
 
 datahub
-
+https://www.reddit.com/r/dataengineering/comments/ouwody/delta_lake_can_you_explain_delta_lake_but_in_my/

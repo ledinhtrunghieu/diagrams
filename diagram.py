@@ -1,5 +1,7 @@
 # make sure the Graphviz executables are on your systems' path
 import os
+
+from flask_login import AUTH_HEADER_NAME
 os.environ["PATH"] += os.pathsep + 'D:/Graphviz/bin/'
 
 
@@ -37,14 +39,17 @@ with Diagram(name="Data Diagrams", show=True, direction="LR"):
 
             with Cluster("Data Warehouse"):
                 dw_local_dbt = Dbt("Transform")
+                local_ge = Custom("greate_expectations","./custom_icons/ge.png")
                 with Cluster("Column-Oriented Wrappers"):
                     dw_local_postgresql = Postgresql('Postgre SQL')
 
             with Cluster("Data Lake"):
                 dw_local_spark = Spark("Spark")
+                local_df = Python("DataFrame")
+                local_dl = Custom("File Format","./custom_icons/dl.png")
                 dw_local_storage = Storage("Storage")
-                local_rawdata >> dw_local_spark >> dw_local_storage >> dw_local_dbt >> dw_local_postgresql
-            
+                local_rawdata >> local_df >> dw_local_spark >> local_dl >> dw_local_storage >> dw_local_dbt >> local_ge >> dw_local_postgresql
+                local_jp = Custom("File Format","./custom_icons/dl.png")
             superset1 =  Superset("Local Dashboard")
         
         with Cluster("AWS Cloud"):
@@ -52,6 +57,7 @@ with Diagram(name="Data Diagrams", show=True, direction="LR"):
 
             with Cluster("Data Warehouse"):
                 cloud_dbt = Dbt("Transform") 
+                cloud_ge = Custom("greate_expectations","./custom_icons/ge.png")
                 cloud_redshift = Redshift('AWS Redshift')
 
             cloud_s3 = S3("S3 Buckets")
@@ -60,7 +66,7 @@ with Diagram(name="Data Diagrams", show=True, direction="LR"):
                 cloud_emr= EMR('AWS EMR')
                 cloud_dl = Custom("File Format","./custom_icons/dl.png")
                 cloud_bucket = S3("Data Lake")
-                cloud_ec2 >> cloud_s3 >> cloud_emr >> cloud_dl >> cloud_bucket >> cloud_dbt >> cloud_redshift
+                cloud_ec2 >> cloud_s3 >> cloud_emr >> cloud_dl >> cloud_bucket >> cloud_dbt >> cloud_ge >> cloud_redshift
 
             cloud_alb = ElbApplicationLoadBalancer("Application Load Balancer")
             
@@ -76,3 +82,6 @@ with Diagram(name="Data Diagrams", show=True, direction="LR"):
     dw_local_postgresql >> superset1 >> users
     cloud_alb >> superset2 >> users
     
+Jupyter 
+Athena
+DataHub

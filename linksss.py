@@ -30,3 +30,10 @@ https://www.youtube.com/watch?v=9iN6iw7Lamo
 
 datahub
 https://www.reddit.com/r/dataengineering/comments/ouwody/delta_lake_can_you_explain_delta_lake_but_in_my/
+
+
+https://seattledataguy.substack.com/p/what-is-dbt-and-why-are-companies?utm_source=url
+
+https://www.theseattledataguy.com/why-you-need-to-migrate-to-the-modern-data-stack/#page-content
+the tools can talk or link with almost other tools in the industry now
+

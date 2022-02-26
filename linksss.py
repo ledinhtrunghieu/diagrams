@@ -37,3 +37,15 @@ https://seattledataguy.substack.com/p/what-is-dbt-and-why-are-companies?utm_sour
 https://www.theseattledataguy.com/why-you-need-to-migrate-to-the-modern-data-stack/#page-content
 the tools can talk or link with almost other tools in the industry now
 
+https://aws.amazon.com/blogs/big-data/build-a-healthcare-data-warehouse-using-amazon-emr-amazon-redshift-aws-lambda-and-omop/
+https://aws.amazon.com/blogs/big-data/create-a-healthcare-data-hub-with-aws-and-mirth-connect/
+https://aws.amazon.com/blogs/big-data/creating-data-science-environments-on-aws-for-health-analysis-using-ohdsi/
+https://slidetodoc.com/omop-common-data-model-cdm-extracttransformload-etl-tutorial/
+https://www.sciencedirect.com/science/article/pii/S1532046418300388
+https://www.cs.colostate.edu/etl/papers/Thesis.pdf
+https://health.ucdavis.edu/data/sources.html
+https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0212463
+https://chime.ucsf.edu/observational-medical-outcomes-partnership-omop
+
+
+

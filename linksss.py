@@ -50,3 +50,7 @@ https://chime.ucsf.edu/observational-medical-outcomes-partnership-omop
 https://en.wikipedia.org/wiki/Fact_table#:~:text=The%20grain%20of%20a%20fact,a%20day%2C%20product%20and%20store.
 https://github.com/OHDSI/ETL-Synthea/tree/master/inst/sql/sql_server/cdm_version/v540
 https://www.google.com/search?q=multiple+fact+date&rlz=1C1CHBF_enVN900VN900&oq=multiple+fact+date&aqs=chrome..69i57.4009j0j1&sourceid=chrome&ie=UTF-8
+
+https://www.confessionsofadataguy.com/part-3-data-modeling-in-data-warehouses-data-lakes-and-lake-houses/
+
+https://www.reddit.com/r/dataengineering/comments/t2mh65/why_this_subreddit_dislikes_the_socalled_modern/

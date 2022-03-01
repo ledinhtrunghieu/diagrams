@@ -54,3 +54,7 @@ https://www.google.com/search?q=multiple+fact+date&rlz=1C1CHBF_enVN900VN900&oq=m
 https://www.confessionsofadataguy.com/part-3-data-modeling-in-data-warehouses-data-lakes-and-lake-houses/
 
 https://www.reddit.com/r/dataengineering/comments/t2mh65/why_this_subreddit_dislikes_the_socalled_modern/
+https://www.reddit.com/r/dataengineering/comments/lp6aom/what_technologiesframeworks_do_you_see_getting/
+https://www.reddit.com/r/dataengineering/comments/idos6d/questions_about_the_staging_area_and_data/
+https://www.reddit.com/r/dataengineering/comments/eqhnmj/fast_etl_in_python_ideas/
+https://www.reddit.com/r/dataengineering/comments/gh2674/ideas_for_etl_pipeline_architecture/

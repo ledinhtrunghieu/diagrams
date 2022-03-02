@@ -57,4 +57,8 @@ https://www.reddit.com/r/dataengineering/comments/t2mh65/why_this_subreddit_disl
 https://www.reddit.com/r/dataengineering/comments/lp6aom/what_technologiesframeworks_do_you_see_getting/
 https://www.reddit.com/r/dataengineering/comments/idos6d/questions_about_the_staging_area_and_data/
 https://www.reddit.com/r/dataengineering/comments/eqhnmj/fast_etl_in_python_ideas/
+do a much of the transformation on the server as possible because Python/R can only handle so much data running on some random dev/analysts laptop
 https://www.reddit.com/r/dataengineering/comments/gh2674/ideas_for_etl_pipeline_architecture/
+https://www.citusdata.com/blog/2021/03/05/citus-10-release-open-source-rebalancer-and-columnar-for-postgres/
+
+

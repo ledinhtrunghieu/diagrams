@@ -62,3 +62,5 @@ https://www.reddit.com/r/dataengineering/comments/gh2674/ideas_for_etl_pipeline_
 https://www.citusdata.com/blog/2021/03/05/citus-10-release-open-source-rebalancer-and-columnar-for-postgres/
 
 
+https://github.com/delta-io/delta-rs
+https://www.youtube.com/watch?v=hAFRfnreTAo&t=206s
